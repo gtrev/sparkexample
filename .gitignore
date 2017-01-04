@@ -1,0 +1,9 @@
+*.class
+*~
+.ensime
+.ensime_cache
+
+# Package Files #
+*.jar
+*.war
+*.ear

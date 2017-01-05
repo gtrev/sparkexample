@@ -26,9 +26,6 @@ public class SparkSQL {
 	    .load("/var/tmp/lastfm-dataset-360K/usersha1-profile.tsv");
 
 	rawDs.printSchema();
-
-
-
 	
 	// Encoders
 	Encoder<LastFMPlays> lastFMEncoder = Encoders.bean(LastFMPlays.class);

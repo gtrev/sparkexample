@@ -2,6 +2,7 @@
 *~
 .ensime
 .ensime_cache
+target/
 
 # Package Files #
 *.jar

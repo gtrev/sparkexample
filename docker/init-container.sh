@@ -11,14 +11,14 @@ if [ $USER != "root" ] ; then
     exit 1
 fi
 
-#for i in `docker ps -q` ; do
-#    docker cp "${DIR}"/"${file1}" "${i}":"${DIR}"
-#    docker cp "${DIR}"/"${file2}" "${i}":"${DIR}"
-#done
-
 for i in `docker ps -q` ; do
-    docker exec -d "${i}" ${CMD}
+    docker cp "${DIR}"/"${file1}" "${i}":"${DIR}"
+    docker cp "${DIR}"/"${file2}" "${i}":"${DIR}"
 done
+
+#for i in `docker ps -q` ; do
+#    docker exec -d "${i}" ${CMD}
+#done
 
 
 

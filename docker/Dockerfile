@@ -13,3 +13,4 @@ RUN apt-get-install -y curl \
       && rm spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
       && cd /
 
+RUN mkdir /var/tmp/lastfm-dataset-360K

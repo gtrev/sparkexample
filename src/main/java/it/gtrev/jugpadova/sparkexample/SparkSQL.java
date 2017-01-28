@@ -80,7 +80,9 @@ public class SparkSQL {
 	joinedDS.createOrReplaceTempView("lastfm");
 
 	
-	Dataset<Row> rowsDF = spark.sql("select * from lastfm where plays > 100 order by artistName");
+	Dataset<Row> rowsDF = spark.sql("select * from lastfm where plays > 50 order by plays");
+
+	rowsDF.explain();
 	rowsDF.show();
     }
 }
